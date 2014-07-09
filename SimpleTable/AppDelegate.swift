@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _View.frame=_ViewFrame
         var _con:UIViewController
         _con=UINavigationController(rootViewController:ViewController)
-        self.window!.rootViewController=_con
+        self.window!.rootViewController=ViewController
         
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()

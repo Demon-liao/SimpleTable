@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a3Z-VE-2PX">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
-        <!--Simple Table - simple-->
+        <!--Navigation Controller - Item-->
+        <scene sceneID="hYV-pC-pJO">
+            <objects>
+                <navigationController id="VQN-MS-kgc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UZx-xV-XDb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBL-g5-aTE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xrC-hQ-pNt">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="VTK-tb-jqq" kind="relationship" relationship="rootViewController" id="Zqt-Eh-1cS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rET-nA-iXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="205"/>
+        </scene>
+        <!--Simple Table - 112-->
         <scene sceneID="bTa-Cj-Qa9">
             <objects>
-                <viewController storyboardIdentifier="simpleTable1" id="VTK-tb-jqq" customClass="SimpleTable" customModule="SimpleTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="simpleTable1" title="112" id="VTK-tb-jqq" customClass="SimpleTable" customModule="SimpleTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g5C-99-hGf"/>
                         <viewControllerLayoutGuide type="bottom" id="qhg-5Z-9fx"/>
@@ -61,6 +80,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="simple" id="Itk-rk-aZm"/>
+                    <navigationItem key="navigationItem" title="112" id="G3B-V7-DxN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="SimpletableView" destination="TqK-Rg-4SB" id="dhF-md-Sae"/>
@@ -68,9 +88,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJF-9V-ati" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="317"/>
+            <point key="canvasLocation" x="761" y="205"/>
         </scene>
-        <!--Sentions Table - Item-->
+        <!--Sentions Table - 113-->
         <scene sceneID="7KQ-a0-33x">
             <objects>
                 <viewController storyboardIdentifier="simpleTable2" id="ax2-2u-U2P" customClass="SentionsTable" customModule="SimpleTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +104,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-od-Veq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentionsTable" id="gB1-cQ-4D7">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -104,6 +124,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0Kf-xK-faS"/>
+                    <navigationItem key="navigationItem" title="113" id="f80-nu-d9b"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="235-FG-JjK" id="mnO-Rx-XeQ"/>
@@ -120,7 +141,24 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="629" y="889"/>
+            <point key="canvasLocation" x="825" y="753"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="boB-01-r4S">
+            <objects>
+                <navigationController id="u5n-LP-SoF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zy6-ov-aBd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IUb-Xz-T3b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ax2-2u-U2P" kind="relationship" relationship="rootViewController" id="Klj-tc-Ub7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWg-Kg-1il" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="759"/>
         </scene>
         <!--Tab Bar Controller - 11111-->
         <scene sceneID="cUo-hN-USh">
@@ -128,20 +166,20 @@
                 <tabBarController storyboardIdentifier="TAB" id="a3Z-VE-2PX" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="11111" id="yLM-eQ-cOz"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nBE-jD-P4I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ax2-2u-U2P" kind="relationship" relationship="viewControllers" id="NX4-yr-lA9"/>
-                        <segue destination="VTK-tb-jqq" kind="relationship" relationship="viewControllers" id="r0V-eM-lp9"/>
+                        <segue destination="VQN-MS-kgc" kind="relationship" relationship="viewControllers" id="2Sc-Ax-sGr"/>
+                        <segue destination="u5n-LP-SoF" kind="relationship" relationship="viewControllers" id="kvR-Sg-VeE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVk-dq-xNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="695"/>
+            <point key="canvasLocation" x="-27" y="399"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

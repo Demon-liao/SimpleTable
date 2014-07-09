@@ -28,14 +28,13 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         sectionTable.tableHeaderView=searchBar
         sectionTable.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
 //        
-        
+       
         filterNames=NSMutableArray.array()
         searchBar.delegate=self
 
         serchController=UISearchDisplayController(searchBar:searchBar,contentsController:self)
         //init(searchBar: UISearchBar!, contentsController viewController: UIViewController!)
         serchController.delegate=self;
-        serchController.searchResultsTableView.backgroundColor=UIColor.grayColor()
         serchController.searchResultsDataSource=self
 
         var bundle:NSBundle=NSBundle.mainBundle()//获取项目的资源包
@@ -106,19 +105,21 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         return cell
     }
     //返回显示索引
-//    func sectionIndexTitlesForTableView(tableView: UITableView!)->NSArray{
-//        if(tableView.tag==1){
-//            return self.keys
-//        }else{
-//            return nil
-//        }
-//        
-//    }
+    func sectionIndexTitlesForTableView(tableView: UITableView!)->NSArray{
+        if(tableView.tag==1){
+            tableView.sectionIndexColor=UIColor.grayColor()
+            return self.keys
+        }else{
+            return NSArray()
+        }
+        
+    }
     func tableView(tableView: UITableView!, titleForHeaderInSection section: Int)->NSString{
         if(tableView.tag==1){
+            //点击返回的位置
             return self.keys[section]
         }else{
-            return ""
+            return NSString()
         }
     }
     

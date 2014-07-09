@@ -27,7 +27,7 @@ class SimpleTable: UIViewController,UITableViewDelegate, UITableViewDataSource{
             ["Name":"IMac","Color":"Silver"],
             ["Name":"Mac Pro","Color":"Silver"]
         ]
-        //SimpletableView.tableHeaderView=UISearchBar(frame: CGRectMake(0,0,320,44))
+        SimpletableView.tableHeaderView=UISearchBar(frame: CGRectMake(0,0,320,44))
         //var tableView:UITableView=SimpletableView.viewWithTag(1) as UITableView
         SimpletableView.registerClass(TableCell.self, forCellReuseIdentifier: CellTable)
                 // Do any additional setup after loading the view.
