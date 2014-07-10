@@ -30,8 +30,8 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         tabBarH=self.tabBarController.tabBar.frame.size.height
         searchBar=UISearchBar(frame: CGRectMake(0,navigationBarH+statusBarH,320,44))
         self.view.addSubview(searchBar)
-
-        sectionTable.tableHeaderView=nil
+        
+        sectionTable.tableHeaderView=UIView(frame:CGRectMake(0,navigationBarH+statusBarH,320,44))
         sectionTable.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
 
         filterNames=NSMutableArray.array()
@@ -137,15 +137,24 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
     func searchBarCancelButtonClicked(searchBar: UISearchBar!){
        // println(22)
         //点击取消事件
-        searchBar.frame.origin.y=64
+        UIView.animateWithDuration(0.2){ //闭包的动画表达方式
+            self.searchBar.frame.origin.y=64
+        }
+        
     }
     func searchBarTextDidBeginEditing(searchBar: UISearchBar!){
         //获取光标事件
-        searchBar.frame.origin.y=20
+        UIView.animateWithDuration(0.3){
+            self.searchBar.frame.origin.y=20
+        }
+        
     }
     func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController!){
          //点击蒙版后执行
-        searchBar.frame.origin.y=64
+        UIView.animateWithDuration(0.2){
+            self.searchBar.frame.origin.y=64
+        }
+        
     }
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
         //self.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
