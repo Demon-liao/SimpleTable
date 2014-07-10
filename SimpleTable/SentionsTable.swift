@@ -20,15 +20,20 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
     var filterNames:NSMutableArray!
     var serchController:UISearchDisplayController!
     var searchBar:UISearchBar!
+    var statusBarH=UIApplication.sharedApplication().statusBarFrame.size.height
+    var navigationBarH:CGFloat = 0
+    var tabBarH:CGFloat = 0
     @IBOutlet var sectionTable: UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var nav=UINavigationBar(frame: CGRectMake(0,0,320,44))
-        searchBar=UISearchBar(frame: CGRectMake(0,0,320,44))
-        sectionTable.tableHeaderView=searchBar
+        navigationBarH=self.navigationController.navigationBar.frame.size.height
+        tabBarH=self.tabBarController.tabBar.frame.size.height
+        searchBar=UISearchBar(frame: CGRectMake(0,navigationBarH+statusBarH,320,44))
+        self.view.addSubview(searchBar)
+
+        sectionTable.tableHeaderView=nil
         sectionTable.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
-//        
-       
+
         filterNames=NSMutableArray.array()
         searchBar.delegate=self
 
@@ -128,14 +133,23 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         tableView.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
        
     }
-    func searchDisplayController(controller: UISearchDisplayController!, didShowSearchResultsTableView tableView: UITableView!){
-        // tableView.frame.origin.y=20
-        // tableView.frame.size.height=tableView.frame.size.height-64
 
-         tableView.separatorInset.top=0
+    func searchBarCancelButtonClicked(searchBar: UISearchBar!){
+       // println(22)
+        //点击取消事件
+        searchBar.frame.origin.y=64
+    }
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar!){
+        //获取光标事件
+        searchBar.frame.origin.y=20
+    }
+    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController!){
+         //点击蒙版后执行
+        searchBar.frame.origin.y=64
     }
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
         //self.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
+        
         filterNames.removeAllObjects()
        
   
@@ -152,11 +166,6 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
             }
             
         }
-        
-        return true
-    }
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool{
-        
         
         return true
     }
