@@ -37,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-Rg-4SB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-Rg-4SB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -79,6 +79,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qhg-5Z-9fx" firstAttribute="top" secondItem="TqK-Rg-4SB" secondAttribute="bottom" constant="-49" id="gGT-XZ-HJq"/>
+                            <constraint firstAttribute="centerY" secondItem="TqK-Rg-4SB" secondAttribute="centerY" id="sdY-T9-6cW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="simple" id="Itk-rk-aZm"/>
                     <navigationItem key="navigationItem" title="112" id="G3B-V7-DxN"/>
@@ -103,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-od-Veq">
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-od-Veq">
                                 <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -123,6 +127,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="63k-nS-7OH" firstAttribute="top" secondItem="cLt-od-Veq" secondAttribute="bottom" constant="-49" id="Abj-EZ-Wkp"/>
+                            <constraint firstAttribute="centerY" secondItem="cLt-od-Veq" secondAttribute="centerY" constant="-22" id="N9n-aT-QlY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0Kf-xK-faS"/>
                     <navigationItem key="navigationItem" title="113" id="f80-nu-d9b"/>
@@ -142,7 +150,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="814" y="751"/>
+            <point key="canvasLocation" x="815" y="754"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="boB-01-r4S">

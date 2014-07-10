@@ -33,6 +33,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         
         //sectionTable.tableHeaderView=UIView(frame:CGRectMake(0,navigationBarH+statusBarH,320,44))
         sectionTable.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
+       
 
         filterNames=NSMutableArray.array()
         searchBar.delegate=self
@@ -149,7 +150,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         }
         
     }
-    func searchDisplayControllerDidEndSearch(controller: UISearchDisplayController!){
+    func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController!){
          //点击蒙版后执行
         UIView.animateWithDuration(0.2){
             self.searchBar.frame.origin.y=64
