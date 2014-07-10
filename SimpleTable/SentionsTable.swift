@@ -138,7 +138,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
     func searchBarCancelButtonClicked(searchBar: UISearchBar!){
        // println(22)
         //点击取消事件
-        UIView.animateWithDuration(0.2){ //闭包的动画表达方式
+        UIView.animateWithDuration(0.25){ //闭包的动画表达方式
             self.searchBar.frame.origin.y=64
         }
         
@@ -152,7 +152,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
     }
     func searchDisplayControllerWillEndSearch(controller: UISearchDisplayController!){
          //点击蒙版后执行
-        UIView.animateWithDuration(0.2){
+        UIView.animateWithDuration(0.25){
             self.searchBar.frame.origin.y=64
         }
         
