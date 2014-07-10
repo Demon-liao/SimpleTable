@@ -31,7 +31,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         searchBar=UISearchBar(frame: CGRectMake(0,navigationBarH+statusBarH,320,44))
         self.view.addSubview(searchBar)
         
-        sectionTable.tableHeaderView=UIView(frame:CGRectMake(0,navigationBarH+statusBarH,320,44))
+        //sectionTable.tableHeaderView=UIView(frame:CGRectMake(0,navigationBarH+statusBarH,320,44))
         sectionTable.registerClass(UITableViewCell.self , forCellReuseIdentifier: CellTable)
 
         filterNames=NSMutableArray.array()
