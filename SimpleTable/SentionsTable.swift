@@ -42,13 +42,13 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         //init(searchBar: UISearchBar!, contentsController viewController: UIViewController!)
         serchController.delegate=self;
         serchController.searchResultsDataSource=self
-
+        sectionTable.contentInset.top=44
         var bundle:NSBundle=NSBundle.mainBundle()//获取项目的资源包
         var plistURL:NSURL=bundle.URLForResource("sortednames", withExtension: "plist")
         self.names=NSDictionary(contentsOfURL:plistURL)
         var keys=self.names.allKeys as Array<String>
         self.keys=sort(keys,backwards)
-        
+
         
         // Do any additional setup after loading the view.
     }
@@ -82,6 +82,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
             var key=self.keys[section]
             var nameSection:NSArray=self.names[key] as NSArray
             return nameSection.count
+            
         }else{
             return filterNames.count
         }
@@ -93,7 +94,6 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
             var key=self.keys[indexPath.section]
             var nameSection:NSArray=self.names[key] as NSArray
             cell.textLabel.text=nameSection[indexPath.row] as String
-           
         }else{
            // tableView.frame.origin.y=20
 //            tableView.frame.size.height=410
@@ -107,7 +107,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
                 
             }
         }
-        
+     
         return cell
     }
     //返回显示索引
@@ -176,11 +176,14 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
             }
             
         }
-        
+      
         return true
     }
+//setContentOffset(contentOffset: CGPoint, animated: Bool) /
     override func viewWillAppear(animated: Bool){
-    
+        println(sectionTable.contentOffset)
+        sectionTable.contentOffset.y=100
+        
       //elf.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
      }
     /*
