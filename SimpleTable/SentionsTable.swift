@@ -47,7 +47,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         var plistURL:NSURL=bundle.URLForResource("sortednames", withExtension: "plist")
         self.names=NSDictionary(contentsOfURL:plistURL)
         var keys=self.names.allKeys as Array<String>
-        self.keys=sort(keys,backwards)
+        self.keys=sorted(keys,backwards)
 
         
         // Do any additional setup after loading the view.

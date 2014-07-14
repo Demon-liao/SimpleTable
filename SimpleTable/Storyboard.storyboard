@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a3Z-VE-2PX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="a3Z-VE-2PX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="hYV-pC-pJO">
             <objects>
                 <navigationController id="VQN-MS-kgc" sceneMemberID="viewController">
@@ -24,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="393" y="205"/>
         </scene>
-        <!--Simple Table - 112-->
+        <!--112-->
         <scene sceneID="bTa-Cj-Qa9">
             <objects>
                 <viewController storyboardIdentifier="simpleTable1" title="112" id="VTK-tb-jqq" customClass="SimpleTable" customModule="SimpleTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +86,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="simple" id="Itk-rk-aZm"/>
                     <navigationItem key="navigationItem" title="112" id="G3B-V7-DxN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics">
+                        <size key="portraitSize" width="320" height="480"/>
+                        <size key="landscapeSize" width="480" height="320"/>
+                    </simulatedScreenMetrics>
                     <connections>
                         <outlet property="SimpletableView" destination="TqK-Rg-4SB" id="dhF-md-Sae"/>
                     </connections>
@@ -94,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="761" y="205"/>
         </scene>
-        <!--Sentions Table - 113-->
+        <!--113-->
         <scene sceneID="7KQ-a0-33x">
             <objects>
                 <viewController storyboardIdentifier="simpleTable2" id="ax2-2u-U2P" customClass="SentionsTable" customModule="SimpleTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +137,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0Kf-xK-faS"/>
                     <navigationItem key="navigationItem" title="113" id="f80-nu-d9b"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics">
+                        <size key="portraitSize" width="320" height="480"/>
+                        <size key="landscapeSize" width="480" height="320"/>
+                    </simulatedScreenMetrics>
                     <connections>
                         <outlet property="searchDisplayController" destination="235-FG-JjK" id="mnO-Rx-XeQ"/>
                         <outlet property="sectionTable" destination="cLt-od-Veq" id="j6J-cr-cme"/>
@@ -151,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="815" y="754"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Item-->
         <scene sceneID="boB-01-r4S">
             <objects>
                 <navigationController id="u5n-LP-SoF" sceneMemberID="viewController">
@@ -168,13 +175,12 @@
             </objects>
             <point key="canvasLocation" x="393" y="759"/>
         </scene>
-        <!--Tab Bar Controller - 11111-->
+        <!--11111-->
         <scene sceneID="cUo-hN-USh">
             <objects>
                 <tabBarController storyboardIdentifier="TAB" id="a3Z-VE-2PX" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="11111" id="yLM-eQ-cOz"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="320" height="480"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nBE-jD-P4I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -193,6 +199,9 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>
