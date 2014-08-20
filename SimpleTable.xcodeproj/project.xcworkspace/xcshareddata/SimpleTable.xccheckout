@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>55BD2338-9489-4CF7-8C9A-33BFAA14B9BC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleTable</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F2722008519E9F6FC71E7B22EC934365E4C4BF5A</key>
+		<string>https://github.com/Demon-liao/SimpleTable.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleTable.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F2722008519E9F6FC71E7B22EC934365E4C4BF5A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Demon-liao/SimpleTable.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F2722008519E9F6FC71E7B22EC934365E4C4BF5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2722008519E9F6FC71E7B22EC934365E4C4BF5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SimpleTable</string>
+		</dict>
+	</array>
+</dict>
+</plist>

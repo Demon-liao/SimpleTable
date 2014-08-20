@@ -17,7 +17,7 @@ class SimpleTable: UIViewController,UITableViewDelegate, UITableViewDataSource{
     var dwarves:Array<String>=[]
     var computers=NSMutableArray()
     let CellTable="CellTable"
-    @IBOutlet var SimpletableView: UITableView
+    @IBOutlet var SimpletableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dwarves=["sleepy","sneezy","bashful","happy","doc"]
@@ -35,7 +35,7 @@ class SimpleTable: UIViewController,UITableViewDelegate, UITableViewDataSource{
     override func viewWillAppear(animated: Bool){
        
 
-        //elf.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
+        //elf.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,7 +60,7 @@ class SimpleTable: UIViewController,UITableViewDelegate, UITableViewDataSource{
         //此为cell的Identifier标志，TableView里面必须有cell才行
         //tableview里面可以加入多个cell
         if(indexPath.section==0){
-            var cell:UITableViewCell=tableView.dequeueReusableCellWithIdentifier(SimleTabledentifier) as UITableViewCell
+            var cell:UITableViewCell?=tableView.dequeueReusableCellWithIdentifier(SimleTabledentifier) as? UITableViewCell
             
             if(cell==nil){
                 cell=UITableViewCell(
@@ -71,11 +71,11 @@ class SimpleTable: UIViewController,UITableViewDelegate, UITableViewDataSource{
             }
             var image:UIImage=UIImage(named:"star.png")
             var Himage:UIImage=UIImage(named:"star2.png")
-            cell.imageView.image=image
-            cell.imageView.highlightedImage=Himage
-            cell.textLabel.text = self.dwarves[indexPath.row] as String
-            cell.textLabel.font=UIFont.boldSystemFontOfSize(20)//需要设置高度，如果高度小于文字大小，文字会默认最大字体
-            cell.detailTextLabel.text="1哈"
+            cell!.imageView.image=image
+            cell!.imageView.highlightedImage=Himage
+            cell!.textLabel.text = self.dwarves[indexPath.row] as String
+            cell!.textLabel.font=UIFont.boldSystemFontOfSize(20)//需要设置高度，如果高度小于文字大小，文字会默认最大字体
+            cell!.detailTextLabel.text="1哈"
 
             return cell
         }else{

@@ -23,7 +23,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
     var statusBarH=UIApplication.sharedApplication().statusBarFrame.size.height
     var navigationBarH:CGFloat = 0
     var tabBarH:CGFloat = 0
-    @IBOutlet var sectionTable: UITableView
+    @IBOutlet var sectionTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarH=self.navigationController.navigationBar.frame.size.height
@@ -44,7 +44,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         serchController.searchResultsDataSource=self
         sectionTable.contentInset.top=44
         var bundle:NSBundle=NSBundle.mainBundle()//获取项目的资源包
-        var plistURL:NSURL=bundle.URLForResource("sortednames", withExtension: "plist")
+        var plistURL:NSURL=bundle.URLForResource("sortednames", withExtension: "plist")!
         self.names=NSDictionary(contentsOfURL:plistURL)
         var keys=self.names.allKeys as Array<String>
         self.keys=sorted(keys,backwards)
@@ -163,7 +163,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
         filterNames.removeAllObjects()
        
   
-        if(searchString.utf16count > 0){
+        if(searchString.utf16Count > 0){
             var priedicate:NSPredicate=NSPredicate(){//闭包
                 name,b in
                 var range:NSRange=name.rangeOfString(searchString,options:NSStringCompareOptions.CaseInsensitiveSearch)
@@ -171,7 +171,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
                 return range.location != NSNotFound
             }
             for  key in self.keys{
-                var matches:NSArray=self.names[key].filteredArrayUsingPredicate(priedicate) as NSArray
+                var matches:NSArray=self.names[key]!.filteredArrayUsingPredicate(priedicate) as NSArray //.filteredArrayUsingPredicate(priedicate) as NSArray
                 filterNames.addObjectsFromArray(matches)
             }
             
@@ -182,7 +182,7 @@ class SentionsTable: UIViewController,UISearchDisplayDelegate,UITableViewDelegat
 //setContentOffset(contentOffset: CGPoint, animated: Bool) /
     override func viewWillAppear(animated: Bool){
         println(sectionTable.contentOffset)
-        sectionTable.contentOffset.y=100
+       // sectionTable.contentOffset.y=100
         
       //elf.tabBarController.navigationController.setNavigationBarHidden(true, animated: true)
      }

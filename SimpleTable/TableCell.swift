@@ -29,7 +29,7 @@ class TableCell: UITableViewCell {
         }
     
     }
-    init(style: UITableViewCellStyle, reuseIdentifier: String) {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         var nameLabelRect:CGRect=CGRectMake(0,5,70,15)
         var nameLabel:UILabel=UILabel(frame:nameLabelRect)
@@ -54,6 +54,10 @@ class TableCell: UITableViewCell {
         self.contentView.addSubview(_colorValue)
         // Initialization code
 
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     func setName(n:NSString){
